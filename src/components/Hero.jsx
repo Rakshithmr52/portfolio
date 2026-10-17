@@ -7,6 +7,7 @@ import {
   MapPin,
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import profilePhoto from '../assets/profile.jpg';
 import { personalInfo } from '../data/portfolioData';
 import './Hero.css';
 
@@ -117,7 +118,7 @@ export default function Hero() {
             <div className="profile-frame-inner">
               {!imgError ? (
                 <img
-                  src={personalInfo.profileImage}
+                  src={profilePhoto}
                   alt="Photograph of Rakshith M R"
                   className="profile-photo"
                   loading="eager"
