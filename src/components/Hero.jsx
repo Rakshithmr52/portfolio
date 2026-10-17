@@ -116,20 +116,22 @@ export default function Hero() {
           <div className="profile-frame-outer">
             <div className="profile-frame-glow" aria-hidden="true" />
             <div className="profile-frame-inner">
-              {!imgError ? (
-                <img
-                  src={profilePhoto}
-                  alt="Photograph of Rakshith M R"
-                  className="profile-photo"
-                  loading="eager"
-                  onError={() => setImgError(true)}
-                />
-              ) : (
-                <div className="profile-fallback">
-                  <span className="profile-fallback-monogram">RM</span>
-                  <span className="profile-fallback-name">Rakshith M R</span>
-                </div>
-              )}
+              <div className="profile-photo-container">
+                {!imgError ? (
+                  <img
+                    src={profilePhoto}
+                    alt="Photograph of Rakshith M R"
+                    className="profile-photo"
+                    loading="eager"
+                    onError={() => setImgError(true)}
+                  />
+                ) : (
+                  <div className="profile-fallback">
+                    <span className="profile-fallback-monogram">RM</span>
+                    <span className="profile-fallback-name">Rakshith M R</span>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Subtle decorative tech accent */}

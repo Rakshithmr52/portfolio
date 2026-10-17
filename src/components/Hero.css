@@ -184,23 +184,90 @@
 
 .profile-frame-glow {
   position: absolute;
-  inset: -12px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(37, 99, 235, 0.15) 50%, transparent 75%);
-  border-radius: 28px;
-  filter: blur(16px);
+  inset: -14px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(37, 99, 235, 0.2) 50%, transparent 75%);
+  border-radius: 32px;
+  filter: blur(20px);
   z-index: 0;
   pointer-events: none;
+  animation: pulseAmbientGlow 4s ease-in-out infinite alternate;
 }
 
+@keyframes pulseAmbientGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* The Frame with Running Light Blue Border */
 .profile-frame-inner {
   position: relative;
   z-index: 1;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: 24px;
-  padding: 5px;
-  background: linear-gradient(145deg, rgba(56, 189, 248, 0.4), rgba(255, 255, 255, 0.08) 50%, rgba(59, 130, 246, 0.3));
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.2);
+  border-radius: 26px;
+  padding: 4px; /* Thickness of the running light border */
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85), 0 0 35px rgba(56, 189, 248, 0.35);
+  display: flex;
+  background: rgba(14, 20, 36, 0.8);
+}
+
+/* The Running Light Blue Beam that spins continuously around the frame */
+.profile-frame-inner::before {
+  content: '';
+  position: absolute;
+  top: -65%;
+  left: -65%;
+  width: 230%;
+  height: 230%;
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 180deg,
+    rgba(56, 189, 248, 0.15) 230deg,
+    rgba(56, 189, 248, 0.6) 280deg,
+    #38bdf8 330deg,
+    #7dd3fc 350deg,
+    #ffffff 360deg
+  );
+  animation: rotateLightBeam 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Outer subtle glass border overlay */
+.profile-frame-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes rotateLightBeam {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-photo-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #090d16;
 }
 
 .profile-photo {
@@ -208,14 +275,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 20px;
+  border-radius: 22px;
   display: block;
 }
 
 .profile-fallback {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 22px;
   background: linear-gradient(145deg, #0e1629 0%, #151e36 100%);
   display: flex;
   flex-direction: column;
