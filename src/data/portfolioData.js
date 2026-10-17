@@ -157,9 +157,11 @@ export const projectsList = [
       "Status tracking across lifecycle stages (Open, In Progress, Resolved, Closed)",
       "Clean UI for organizing support queues and resolving operational tasks",
     ],
-    links: null, // No verified repository or live demo supplied
+    links: {
+      github: "https://github.com/Rakshithmr52/ticketapp",
+    },
     icon: "ticket",
-    notice: "Internal project workflow implementation. Verified source links can be shared upon request.",
+    notice: null,
   },
 ];
 
