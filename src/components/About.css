@@ -1,0 +1,130 @@
+/* About Section Styles */
+.about-section {
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.about-narrative-card {
+  padding: 2.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.about-quote-mark {
+  position: absolute;
+  top: 1rem;
+  right: 1.8rem;
+  font-size: 5rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  color: rgba(56, 189, 248, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-narrative-heading {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.about-narrative-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.about-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.about-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.highlight-check {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+/* Pillar Cards Stack */
+.about-pillars-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pillar-card {
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.pillar-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.pillar-card:hover .pillar-icon-wrapper {
+  background: var(--accent-cyan);
+  color: #07090e;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+  transform: scale(1.05);
+}
+
+.pillar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pillar-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pillar-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-narrative-card {
+    padding: 2rem;
+  }
+}
