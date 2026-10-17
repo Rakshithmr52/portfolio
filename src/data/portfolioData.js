@@ -58,6 +58,19 @@ export const educationList = [
   },
 ];
 
+export const internshipList = [
+  {
+    id: "cranes-varsity",
+    role: "Full Stack Java Intern",
+    company: "Cranes Varsity Private Limited",
+    highlights: [
+      "Learned fundamentals of Java full stack development",
+      "Gained exposure to frontend and backend technologies",
+      "Worked in a real-time development environment",
+    ],
+  },
+];
+
 export const skillCategories = [
   {
     title: "Programming",
@@ -114,11 +127,7 @@ export const projectsList = [
       "Dashboard analytics with storage quota tracking and file-type distribution visualization",
       "Responsive sidebar layout, smooth transitions, and toast notifications",
     ],
-    links: {
-      demo: "https://client-iota-one-25.vercel.app/",
-      github: "https://github.com/GKXYZ/digital-document-management-system-cloud",
-      api: "https://server-bay-nine-93.vercel.app/",
-    },
+    links: null,
     icon: "cloud",
   },
   {
@@ -137,9 +146,8 @@ export const projectsList = [
       "Incorporation of road-hazard data to assist pedestrian safety",
       "Active research and prototype development under progress",
     ],
-    links: null, // No verified public repository or live demo supplied
+    links: null,
     icon: "footprints",
-    notice: "Currently under active development. Repository & demo links will be released upon completion.",
   },
   {
     id: "ticket-management",
@@ -157,11 +165,25 @@ export const projectsList = [
       "Status tracking across lifecycle stages (Open, In Progress, Resolved, Closed)",
       "Clean UI for organizing support queues and resolving operational tasks",
     ],
-    links: {
-      github: "https://github.com/Rakshithmr52/ticketapp",
-    },
+    links: null,
     icon: "ticket",
-    notice: null,
+  },
+];
+
+export const achievementsList = [
+  {
+    id: "volleyball",
+    title: "Winner in volleyball inter college level",
+    event: "Inter College Tournament",
+    sport: "Volleyball",
+    badge: "Champion",
+  },
+  {
+    id: "cricket",
+    title: "Winner in cricket inter class college level",
+    event: "Inter Class Tournament",
+    sport: "Cricket",
+    badge: "Champion",
   },
 ];
 

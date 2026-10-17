@@ -1,0 +1,132 @@
+/* Internship Section */
+.internship-section {
+  position: relative;
+}
+
+.internship-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.internship-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.internship-card:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+}
+
+.internship-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1.5rem;
+}
+
+.internship-role-box {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.internship-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.internship-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-cyan);
+  margin-bottom: 0.25rem;
+}
+
+.internship-role {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.internship-company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+.company-icon {
+  color: var(--accent-cyan);
+}
+
+.internship-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.highlights-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.highlight-icon {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 680px) {
+  .internship-card {
+    padding: 1.75rem;
+  }
+  .internship-role-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .internship-role {
+    font-size: 1.25rem;
+  }
+}

@@ -1,17 +1,13 @@
 import React from 'react';
 import {
   FolderGit2,
-  ExternalLink,
-  Server,
   Cloud,
   Footprints,
   Ticket,
   Check,
   Clock,
   Sparkles,
-  Lock,
 } from 'lucide-react';
-import { GithubIcon } from './BrandIcons';
 import { projectsList } from '../data/portfolioData';
 import './Projects.css';
 
@@ -33,7 +29,7 @@ export default function Projects() {
           </div>
           <h2 className="section-title">Projects & Systems</h2>
           <p className="section-subtitle">
-            Practical software projects demonstrating full-stack cloud integration, workflow architectures, and algorithmic route exploration.
+            Practical software projects demonstrating full-stack cloud architecture, workflow systems, and route optimization.
           </p>
         </div>
 
@@ -107,59 +103,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-
-                  {/* Notice if no links available */}
-                  {project.notice && (
-                    <div className="project-notice">
-                      <Lock size={14} className="notice-icon" />
-                      <span>{project.notice}</span>
-                    </div>
-                  )}
                 </div>
-
-                {/* Card Actions / Links */}
-                {project.links && (
-                  <div className="project-footer-actions">
-                    {project.links.demo && (
-                      <a
-                        href={project.links.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary btn-sm"
-                        aria-label={`Open Live Demo for ${project.shortTitle}`}
-                      >
-                        <span>Live Demo</span>
-                        <ExternalLink size={14} />
-                      </a>
-                    )}
-
-                    {project.links.github && (
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary btn-sm"
-                        aria-label={`Open Source Code on GitHub for ${project.shortTitle}`}
-                      >
-                        <GithubIcon size={14} />
-                        <span>Source Code</span>
-                      </a>
-                    )}
-
-                    {project.links.api && (
-                      <a
-                        href={project.links.api}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-outline btn-sm"
-                        aria-label={`Inspect API Endpoint for ${project.shortTitle}`}
-                      >
-                        <Server size={14} />
-                        <span>API Service</span>
-                      </a>
-                    )}
-                  </div>
-                )}
               </div>
             );
           })}
